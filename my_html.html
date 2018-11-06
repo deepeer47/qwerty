@@ -1,0 +1,53 @@
+<!D0CTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My work in JS</title>
+		<!-- LATEST COMPLITED AND MINIFIED CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</head>
+	<body onload="fetchIssues()">
+		<div class="container">
+			<h1>JS IssueTracker <small>by CodingTheSmartWay.com</small></h1>
+			<div class="jumbotron">
+			 <h3>Add New Issue:</h3>
+			 <form id="issueInputForm">
+			  <div class="from-group">
+			   <label for="issueDescInput">Description</label>
+			   <input type="text" class="form-control" id="issueDEscInput" placeholder="Descibe the issue ...">
+			</div>
+				  <div class="from-group">
+			   <label for="issueSeverityInput">Severity</label>
+			   <select id="issueSeverityInput" class="form-control">
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+			   </select>			   
+			</div>
+				  <div class="from-group">
+			   <label for="issueAssgnedToInput">Assigned To</label>
+			   <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter resposible ...">
+			</div>
+			<button type="submit" class="btn btn-primary">Add</button>
+		   </form>
+		  </div>
+		  <div class="col-ls-12">
+			<div id="issuesList">
+			</div>
+		  </div>
+		  <div class="footer">
+			<p>&copy CodingTheSmartWay.com | Imprint</p>
+		  </div>
+		</div>
+		<script src="https://chancejs.com/chance.min.js"></script>
+		<!-- LATEST COMPLITED AND MINIFIED JAVASCRIPT -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<!-- LATEST CIIMPLITED AND MINIFIED JAVASCRIPT -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="my_main.js"></script>
+
+	</body>
+</html>
