@@ -1,4 +1,4 @@
-document.getElement('issueInputForm').addEventListener('submit', saveIssue);
+document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
 
 function saveIssue(e) {
 	var issueDesc = document.getElementById('issueInput').value;
@@ -22,7 +22,7 @@ function saveIssue(e) {
 	} else {
 	  var issues = JSON.parse(localStorage.getItem('issues'));
 	  issues.push(issue);
-	  localStorage.setItem('issue', JSON.stringify('issues');
+	  localStorage.setItem('issue', JSON.stringify('issues'));
 	}
 	
 	document.getElementById('issueInputForm').reset();
@@ -42,7 +42,7 @@ function seSTatusClosed(id) {
 		}
 }
 	
-	localStorage.setItam('issues,JSON.stringify(issues));
+	localStorage.setItem('issues',JSON.stringify(issues));
 	
 	fetchIssues();
 }
@@ -56,7 +56,7 @@ function deleteIssue(id) {
 		}
 }
 	
-	localStorage.setItam('issues,JSON.stringify(issues));
+	localStorage.setItem('issues',JSON.stringify(issues));
 	
 	fetchIssues();
 }
@@ -74,13 +74,13 @@ function fetchIssues() {
 		var status = issues[i].status;
 		
 		issuesList.innerHTML += '<div class="well">'+
-								'<h6>Issue ID: ' + id + '</h6> +
+								'<h6>Issue ID: ' + id + '</h6>' +
 								'<p><span class-"label label-info">' + status + '</span></p>' +
 								'<h3>' + desc + '</h3>'+
-								'<p><span class="glyphicon glyphicon-time"></span>' + severity + '</p>'+
-								'<p><span class="glyphicon glyphicon-user"></span>' + assingedTo + '</p>'+
-								'<a href="#" onclick="setStatusClosed(\''+id+''\)" class="btn btn-warning">Close</a>'+
-								'<a href="#" onclick="deleteIssue(\''+id+''\)" class="btn btn-danger">Delete</a>'+
+								'<p><span class="glyphicon glyphicon-time"></span>' + severity + '</p> '+
+								'<p><span class="glyphicon glyphicon-user"></span>' + assingedTo + '</p> '+
+								'<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a> '+
+								'<a href="#" onclick="deleteIssue(\''+id+'\')" class="btn btn-danger">Delete</a>'+
 								'</div>';
 	}
 }
